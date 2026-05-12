@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivangi Kaushik — Technical Project Manager | Scrum Master | Agile Delivery Lead</title>
+<meta name="description" content="Shivangi Kaushik — Technical Project Manager, Scrum Master and Agile Delivery Lead with 9+ years experience in enterprise digital transformation, SAP Commerce Cloud and cross-functional global delivery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=Instrument+Sans:wght@400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ════════════════════════════════════════════════
+   TOKENS
+════════════════════════════════════════════════ */
+:root {
+  --void:      #080C14;
+  --depth:     #0C1220;
+  --panel:     #111827;
+  --panel-2:   #162032;
+  --surface:   rgba(22,32,50,0.7);
+  --border:    rgba(99,179,237,0.12);
+  --border-2:  rgba(99,179,237,0.06);
+  --teal:      #38BDF8;
+  --teal-dim:  #0EA5E9;
+  --teal-glow: rgba(56,189,248,0.15);
+  --gold:      #F59E0B;
+  --gold-dim:  #D97706;
+  --gold-glow: rgba(245,158,11,0.12);
+  --green:     #10B981;
+  --green-dim: #059669;
+  --rose:      #F43F5E;
+  --violet:    #8B5CF6;
+  --text:      #E2E8F0;
+  --text-2:    #94A3B8;
+  --text-3:    #475569;
+  --white:     #FFFFFF;
+  --f-display: 'Fraunces', serif;
+  --f-body:    'Instrument Sans', sans-serif;
+  --f-mono:    'Fira Code', monospace;
+  --ease:      cubic-bezier(0.16,1,0.3,1);
+  --ease2:     cubic-bezier(0.4,0,0.2,1);
+}
+
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--f-body);
+  background: var(--void);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ════ Scrollbar ════ */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--depth); }
+::-webkit-scrollbar-thumb { background: var(--teal-dim); border-radius: 2px; }
+
+/* ════ Selection ════ */
+::selection { background: rgba(56,189,248,0.25); color: var(--white); }
+
+/* ════════════════════════════════════════════════
+   NOISE TEXTURE OVERLAY
+════════════════════════════════════════════════ */
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ════════════════════════════════════════════════
+   LAYOUT
+════════════════════════════════════════════════ */
+.wrap       { max-width: 1280px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
+.wrap--full { max-width: 100%; padding: 0 40px; }
+.section    { padding: 120px 0; position: relative; }
+
+/* ════ Typography ════ */
+h1 { font-family: var(--f-display); font-size: clamp(2.8rem,6vw,5.5rem); line-height: 1.06; font-weight: 700; letter-spacing: -0.02em; }
+h2 { font-family: var(--f-display); font-size: clamp(2rem,4vw,3.2rem); line-height: 1.1; font-weight: 600; }
+h3 { font-family: var(--f-display); font-size: clamp(1.2rem,2vw,1.6rem); font-weight: 600; }
+h4 { font-family: var(--f-body); font-size: 0.92rem; font-weight: 700; letter-spacing: 0.02em; }
+p  { color: var(--text-2); font-size: 1rem; line-height: 1.8; }
+
+.label {
+  font-family: var(--f-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--teal);
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 16px;
+}
+.label::before { content: ''; display: block; width: 28px; height: 1px; background: var(--teal); }
+
+/* ════ Glass card ════ */
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+}
+.glass--gold { border-color: rgba(245,158,11,0.2); background: rgba(245,158,11,0.04); }
+.glass--green { border-color: rgba(16,185,129,0.2); background: rgba(16,185,129,0.04); }
+.glass--rose  { border-color: rgba(244,63,94,0.2); background: rgba(244,63,94,0.04); }
+
+/* ════ Tags ════ */
+.tag {
+  font-family: var(--f-mono); font-size: 0.6rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 4px; display: inline-block;
+}
+.tag--teal   { background: rgba(56,189,248,0.12); color: var(--teal); border: 1px solid rgba(56,189,248,0.2); }
+.tag--gold   { background: rgba(245,158,11,0.12); color: var(--gold); border: 1px solid rgba(245,158,11,0.2); }
+.tag--green  { background: rgba(16,185,129,0.12); color: var(--green); border: 1px solid rgba(16,185,129,0.2); }
+.tag--violet { background: rgba(139,92,246,0.12); color: var(--violet); border: 1px solid rgba(139,92,246,0.2); }
+.tag--rose   { background: rgba(244,63,94,0.12); color: var(--rose); border: 1px solid rgba(244,63,94,0.2); }
+
+/* ════ Buttons ════ */
+.btn {
+  font-family: var(--f-body); font-size: 0.88rem; font-weight: 700;
+  letter-spacing: 0.04em; padding: 14px 28px; border-radius: 8px;
+  border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
+  transition: all 0.25s var(--ease); text-decoration: none;
+}
+.btn-teal   { background: var(--teal); color: var(--void); }
+.btn-teal:hover { background: var(--white); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(56,189,248,0.3); }
+.btn-gold   { background: var(--gold); color: var(--void); }
+.btn-gold:hover { background: #FBBF24; transform: translateY(-2px); }
+.btn-ghost  { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.btn-ghost:hover { border-color: var(--teal); color: var(--teal); transform: translateY(-2px); }
+
+/* ════ Reveal animations ════ */
+.rev { opacity: 0; transform: translateY(28px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+.rev.in { opacity: 1; transform: none; }
+.d1{transition-delay:.1s} .d2{transition-delay:.2s} .d3{transition-delay:.3s}
+.d4{transition-delay:.4s} .d5{transition-delay:.5s} .d6{transition-delay:.6s}
+
+/* ════════════════════════════════════════════════
+   NAV
+════════════════════════════════════════════════ */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+  height: 64px; display: flex; align-items: center;
+  transition: background 0.4s, border-color 0.4s;
+  border-bottom: 1px solid transparent;
+}
+#nav.solid {
+  background: rgba(8,12,20,0.92);
+  backdrop-filter: blur(20px);
+  border-color: var(--border-2);
+}
+.nav-wrap { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+.nav-logo { font-family: var(--f-display); font-size: 1.15rem; font-weight: 700; color: var(--white); }
+.nav-logo span { color: var(--teal); }
+.nav-links { display: flex; gap: 4px; list-style: none; }
+.nav-links a {
+  font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; color: var(--text-2);
+  padding: 7px 14px; border-radius: 6px; text-decoration: none;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-links a:hover { color: var(--teal); background: var(--teal-glow); }
+.nav-right { display: flex; gap: 10px; }
+.nav-pill {
+  font-family: var(--f-mono); font-size: 0.68rem; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 7px 16px; border-radius: 6px;
+  background: var(--teal-glow); border: 1px solid rgba(56,189,248,0.25); color: var(--teal);
+  display: flex; align-items: center; gap: 6px; text-decoration: none;
+  transition: all 0.2s;
+}
+.nav-pill:hover { background: var(--teal); color: var(--void); }
+.nav-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,0.5)} 50%{box-shadow:0 0 0 6px rgba(16,185,129,0)} }
+
+/* ════════════════════════════════════════════════
+   HERO
+════════════════════════════════════════════════ */
+#hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; overflow: hidden;
+  padding-top: 64px;
+}
+
+/* Radial glow behind hero */
+.hero-glow {
+  position: absolute; top: 20%; left: 50%; transform: translate(-50%,-50%);
+  width: 800px; height: 600px;
+  background: radial-gradient(ellipse, rgba(56,189,248,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Animated grid */
+.hero-grid-bg {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(var(--border-2) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-2) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%);
+}
+
+/* Floating Kanban cards */
+.hero-kanban {
+  position: absolute; right: -20px; top: 50%; transform: translateY(-50%);
+  width: 360px; display: flex; flex-direction: column; gap: 12px;
+  animation: floatPanel 6s ease-in-out infinite;
+  opacity: 0.85;
+}
+@keyframes floatPanel { 0%,100%{transform:translateY(-50%) translateX(0)} 50%{transform:translateY(calc(-50% - 12px)) translateX(-4px)} }
+.kcard {
+  background: var(--panel-2); border: 1px solid var(--border);
+  border-radius: 8px; padding: 14px 16px;
+  transition: border-color 0.3s;
+}
+.kcard:hover { border-color: rgba(56,189,248,0.35); }
+.kcard-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.kcard-id { font-family: var(--f-mono); font-size: 0.62rem; color: var(--teal); }
+.kcard-title { font-size: 0.82rem; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+.kcard-bar { height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
+.kcard-fill { height: 100%; border-radius: 2px; transition: width 1s var(--ease); }
+.kcard-meta { display: flex; justify-content: space-between; margin-top: 8px; font-family: var(--f-mono); font-size: 0.6rem; color: var(--text-3); }
+
+/* Velocity mini-widget */
+.vel-widget {
+  position: absolute; left: 40px; bottom: 140px;
+  background: var(--panel-2); border: 1px solid var(--border);
+  border-radius: 10px; padding: 16px 20px; width: 200px;
+  animation: floatWidget 8s ease-in-out infinite 2s;
+  opacity: 0.9;
+}
+@keyframes floatWidget { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+.vw-title { font-family: var(--f-mono); font-size: 0.6rem; color: var(--text-3); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px; }
+.vw-bars { display: flex; align-items: flex-end; gap: 4px; height: 48px; }
+.vw-bar { flex: 1; background: var(--teal-dim); border-radius: 2px 2px 0 0; opacity: 0.6; transition: opacity 0.2s; }
+.vw-bar:last-child { opacity: 1; background: var(--teal); }
+.vw-bar:hover { opacity: 1; }
+.vw-val { font-family: var(--f-display); font-size: 1.6rem; font-weight: 700; color: var(--white); margin-top: 8px; }
+.vw-sub { font-family: var(--f-mono); font-size: 0.58rem; color: var(--green); }
+
+.hero-content { position: relative; z-index: 2; max-width: 700px; padding: 80px 0; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--f-mono); font-size: 0.7rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--teal);
+  background: var(--teal-glow); border: 1px solid rgba(56,189,248,0.2);
+  padding: 8px 16px; border-radius: 999px; margin-bottom: 28px;
+}
+.hero-eyebrow::before { content: ''; display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--teal); animation: pulse 2s infinite; }
+.hero h1 { color: var(--white); margin-bottom: 8px; }
+.hero h1 em { font-style: italic; color: var(--teal); }
+.hero-sub { font-family: var(--f-mono); font-size: 0.82rem; color: var(--gold); letter-spacing: 0.08em; margin-bottom: 24px; }
+.hero p { font-size: 1.05rem; max-width: 580px; margin-bottom: 40px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 72px; }
+
+/* Counter row */
+.counter-row {
+  display: flex; gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px; overflow: hidden;
+  background: var(--surface);
+  backdrop-filter: blur(20px);
+}
+.counter-item {
+  flex: 1; padding: 20px 16px; text-align: center;
+  border-right: 1px solid var(--border-2);
+  position: relative;
+}
+.counter-item:last-child { border-right: none; }
+.counter-item::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--teal), transparent);
+  opacity: 0; transition: opacity 0.3s;
+}
+.counter-item:hover::before { opacity: 1; }
+.counter-num { font-family: var(--f-display); font-size: 1.8rem; font-weight: 700; color: var(--white); display: block; }
+.counter-num span { color: var(--teal); }
+.counter-lbl { font-family: var(--f-mono); font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); margin-top: 4px; display: block; }
+
+/* Ticker */
+.hero-ticker {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 36px; background: var(--panel); border-top: 1px solid var(--border-2);
+  display: flex; align-items: center; overflow: hidden;
+}
+.ticker-track { display: flex; animation: ticker 40s linear infinite; white-space: nowrap; }
+.ticker-item { font-family: var(--f-mono); font-size: 0.65rem; color: var(--text-3); padding: 0 32px; display: flex; align-items: center; gap: 8px; }
+.ticker-item .tpill { padding: 2px 7px; border-radius: 3px; font-size: 0.58rem; }
+.ticker-done  { background: rgba(16,185,129,0.12); color: var(--green); }
+.ticker-prog  { background: rgba(56,189,248,0.12); color: var(--teal); }
+.ticker-risk  { background: rgba(245,158,11,0.12); color: var(--gold); }
+@keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* ════════════════════════════════════════════════
+   ABOUT
+════════════════════════════════════════════════ */
+#about { background: var(--depth); }
+.about-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: start; }
+.about-photo {
+  position: relative; aspect-ratio: 3/4;
+  background: var(--panel); border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center; font-size: 6rem;
+}
+.about-photo::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, transparent 60%, rgba(56,189,248,0.1) 100%);
+}
+.about-photo-badge {
+  position: absolute; bottom: 20px; right: -16px;
+  background: var(--gold); color: var(--void);
+  font-family: var(--f-mono); font-size: 0.65rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 10px 16px; border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(245,158,11,0.35);
+}
+.about-line { width: 100%; height: 1px; background: var(--border); margin: 28px 0; }
+.kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.kpi-card {
+  padding: 20px; border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--panel); transition: border-color 0.3s, transform 0.3s;
+}
+.kpi-card:hover { border-color: rgba(56,189,248,0.3); transform: translateY(-3px); }
+.kpi-num { font-family: var(--f-display); font-size: 2rem; font-weight: 700; color: var(--white); }
+.kpi-lbl { font-family: var(--f-mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); margin-top: 4px; }
+
+/* Timeline */
+.timeline { position: relative; padding-left: 28px; }
+.timeline::before { content: ''; position: absolute; left: 7px; top: 0; bottom: 0; width: 1px; background: var(--border); }
+.tl-item { position: relative; margin-bottom: 32px; }
+.tl-item::before { content: ''; position: absolute; left: -25px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 10px rgba(56,189,248,0.4); }
+.tl-year { font-family: var(--f-mono); font-size: 0.62rem; letter-spacing: 0.12em; color: var(--teal); margin-bottom: 4px; }
+.tl-role { font-size: 0.9rem; font-weight: 700; color: var(--white); }
+.tl-company { font-size: 0.82rem; color: var(--text-2); }
+
+/* ════════════════════════════════════════════════
+   SKILLS
+════════════════════════════════════════════════ */
+#skills { background: var(--void); }
+.skills-tabs { display: flex; gap: 4px; margin-bottom: 40px; flex-wrap: wrap; }
+.skill-tab {
+  font-family: var(--f-body); font-size: 0.82rem; font-weight: 600;
+  padding: 9px 18px; border-radius: 6px; border: 1px solid var(--border);
+  background: transparent; color: var(--text-2); cursor: pointer;
+  transition: all 0.2s;
+}
+.skill-tab.active, .skill-tab:hover { background: var(--teal-glow); border-color: rgba(56,189,248,0.3); color: var(--teal); }
+.skills-panel { display: none; }
+.skills-panel.active { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; animation: fadeIn 0.4s ease; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:none} }
+.skill-item {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 10px; padding: 20px 16px; text-align: center;
+  cursor: default; transition: all 0.3s var(--ease); position: relative; overflow: hidden;
+}
+.skill-item::before {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 2px; background: var(--teal); transform: scaleX(0);
+  transition: transform 0.3s var(--ease);
+}
+.skill-item:hover { border-color: rgba(56,189,248,0.3); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(56,189,248,0.08); }
+.skill-item:hover::before { transform: scaleX(1); }
+.skill-icon { font-size: 1.6rem; display: block; margin-bottom: 10px; }
+.skill-name { font-size: 0.82rem; font-weight: 600; color: var(--text); }
+.skill-level {
+  width: 100%; height: 3px; background: var(--border);
+  border-radius: 2px; margin-top: 10px; overflow: hidden;
+}
+.skill-level-fill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, var(--teal), var(--green)); }
+
+/* Radar chart */
+.radar-wrap { display: flex; justify-content: center; margin-bottom: 40px; }
+
+/* ════════════════════════════════════════════════
+   DASHBOARD
+════════════════════════════════════════════════ */
+#dashboard {
+  background: var(--depth);
+  padding: 100px 0;
+}
+.dash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.dash-widget {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 12px; padding: 24px; position: relative; overflow: hidden;
+}
+.dash-widget.span2 { grid-column: span 2; }
+.dash-widget.tall  { grid-row: span 2; }
+.dw-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.dw-title { font-family: var(--f-mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-3); }
+.dw-badge { font-family: var(--f-mono); font-size: 0.58rem; padding: 3px 8px; border-radius: 4px; }
+
+/* Velocity chart bars */
+.vel-chart { display: flex; align-items: flex-end; gap: 10px; height: 120px; }
+.vc-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0; }
+.vc-bars { display: flex; gap: 3px; align-items: flex-end; height: 90px; width: 100%; }
+.vc-bar { flex: 1; border-radius: 3px 3px 0 0; transition: opacity 0.2s; }
+.vc-committed { background: rgba(56,189,248,0.2); }
+.vc-delivered { background: var(--teal); }
+.vc-label { font-family: var(--f-mono); font-size: 0.56rem; color: var(--text-3); margin-top: 6px; }
+
+/* Burndown */
+.burndown-svg { width: 100%; height: 120px; }
+
+/* Progress bars */
+.prog-list { display: flex; flex-direction: column; gap: 14px; }
+
+.prog-header { display: flex; justify-content: space-between; margin-bottom: 6px; }
+.prog-name { font-size: 0.82rem; color: var(--text); }
+.prog-pct  { font-family: var(--f-mono); font-size: 0.72rem; color: var(--teal); }
+.prog-track { height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.prog-fill  { height: 100%; border-radius: 3px; transition: width 1.5s var(--ease); }
+
+/* Health indicators */
+.health-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+.health-item {
+  background: var(--panel-2); border: 1px solid var(--border);
+  border-radius: 8px; padding: 14px; text-align: center;
+}
+.health-dot { width: 8px; height: 8px; border-radius: 50%; margin: 0 auto 8px; }
+.health-name { font-size: 0.72rem; color: var(--text-2); }
+
+/* Risk matrix */
+.risk-grid { display: grid; grid-template-columns: repeat(3,1fr); grid-template-rows: repeat(3,1fr); gap: 4px; height: 140px; }
+.risk-cell {
+  border-radius: 4px; display: flex; align-items: center; justify-content: center;
+  font-family: var(--f-mono); font-size: 0.58rem; color: var(--text-3); position: relative;
+}
+.risk-cell.level-1 { background: rgba(16,185,129,0.12); }
+.risk-cell.level-2 { background: rgba(245,158,11,0.12); }
+.risk-cell.level-3 { background: rgba(244,63,94,0.12); }
+.risk-bubble {
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.58rem; font-weight: 700;
+  position: absolute;
+}
+
+/* Capacity */
+.capacity-row { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; }
+.cap-avatar { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; }
+.cap-name { font-size: 0.8rem; color: var(--text-2); width: 80px; flex-shrink: 0; }
+.cap-bar  { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.cap-fill { height: 100%; border-radius: 3px; transition: width 1s var(--ease); }
+.cap-pct  { font-family: var(--f-mono); font-size: 0.62rem; color: var(--text-3); width: 32px; text-align: right; }
+
+/* ════════════════════════════════════════════════
+   CASE STUDIES
+════════════════════════════════════════════════ */
+#projects { background: var(--void); }
+.projects-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; margin-bottom: 60px; }
+
+.project-card {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 16px; overflow: hidden; margin-bottom: 20px;
+  transition: border-color 0.3s;
+}
+.project-card:hover { border-color: rgba(56,189,248,0.25); }
+.project-banner { height: 4px; }
+.project-header {
+  padding: 28px 32px; cursor: pointer;
+  display: grid; grid-template-columns: 60px 1fr auto;
+  gap: 20px; align-items: center;
+}
+.project-num { font-family: var(--f-display); font-size: 2.5rem; font-weight: 700; color: var(--border); line-height: 1; transition: color 0.3s; }
+.project-card:hover .project-num { color: var(--teal); }
+.project-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.project-toggle { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-3); transition: all 0.3s; font-size: 1rem; cursor: pointer; }
+.project-card.open .project-toggle { background: var(--teal-glow); border-color: rgba(56,189,248,0.3); color: var(--teal); transform: rotate(45deg); }
+
+.project-detail { display: none; padding: 0 32px 32px; border-top: 1px solid var(--border-2); }
+.project-card.open .project-detail { display: block; animation: slideDown 0.4s var(--ease); }
+@keyframes slideDown { from{opacity:0;transform:translateY(-10px)} to{opacity:1;transform:none} }
+.project-detail-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; padding-top: 28px; }
+
+.achievement-list { margin-top: 16px; }
+.ach-item { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border-2); align-items: flex-start; }
+.ach-item:last-child { border-bottom: none; }
+.ach-icon { color: var(--green); flex-shrink: 0; margin-top: 2px; }
+.ach-text { font-size: 0.88rem; color: var(--text-2); }
+.ach-text strong { color: var(--text); }
+
+.mini-sprint-board { background: var(--panel-2); border-radius: 8px; padding: 16px; }
+.msb-cols { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; }
+
+.msb-head { font-family: var(--f-mono); font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px; padding-bottom: 6px; border-bottom: 2px solid; }
+.msb-head.todo    { border-color: var(--text-3); }
+.msb-head.inprog  { border-color: #60A5FA; }
+.msb-head.review  { border-color: var(--gold); }
+.msb-head.done    { border-color: var(--green); }
+.msb-ticket { background: var(--panel); border: 1px solid var(--border-2); border-radius: 5px; padding: 8px 10px; margin-bottom: 6px; font-size: 0.72rem; color: var(--text-2); }
+.msb-ticket-id { font-family: var(--f-mono); font-size: 0.58rem; color: var(--teal); margin-bottom: 3px; }
+
+.metrics-2x2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+.m-cell { background: var(--panel-2); border-radius: 8px; padding: 16px; text-align: center; }
+.m-big { font-family: var(--f-display); font-size: 2rem; font-weight: 700; color: var(--teal); line-height: 1; }
+.m-lbl { font-family: var(--f-mono); font-size: 0.58rem; color: var(--text-3); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+
+/* ════════════════════════════════════════════════
+   SCRUM PLAYBOOK
+════════════════════════════════════════════════ */
+#playbook { background: var(--depth); }
+.playbook-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.pb-card {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 12px; padding: 28px; transition: all 0.3s var(--ease);
+  position: relative; overflow: hidden;
+}
+.pb-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+}
+.pb-card:nth-child(1)::before { background: var(--teal); }
+.pb-card:nth-child(2)::before { background: var(--gold); }
+.pb-card:nth-child(3)::before { background: var(--green); }
+.pb-card:nth-child(4)::before { background: var(--violet); }
+.pb-card:nth-child(5)::before { background: var(--rose); }
+.pb-card:nth-child(6)::before { background: #60A5FA; }
+.pb-card:hover { transform: translateY(-4px); border-color: rgba(56,189,248,0.25); box-shadow: 0 20px 48px rgba(0,0,0,0.3); }
+.pb-icon { font-size: 2rem; display: block; margin-bottom: 16px; }
+.pb-card h4 { font-size: 1rem; color: var(--white); margin-bottom: 10px; }
+.pb-card p  { font-size: 0.85rem; margin-bottom: 16px; }
+.pb-steps { display: flex; flex-direction: column; gap: 6px; }
+.pb-step { display: flex; gap: 10px; font-size: 0.8rem; color: var(--text-2); }
+.pb-step-num { font-family: var(--f-mono); font-size: 0.62rem; color: var(--teal); flex-shrink: 0; width: 20px; }
+
+/* Scrum cycle visual */
+.scrum-cycle { display: flex; justify-content: center; margin: 48px 0; position: relative; }
+.scrum-ring {
+  width: 320px; height: 320px; border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  animation: spinRing 30s linear infinite;
+}
+@keyframes spinRing { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+.scrum-ring-inner { animation: spinRingInner 30s linear infinite; width: 100%; height: 100%; position: absolute; }
+@keyframes spinRingInner { from{transform:rotate(0deg)} to{transform:rotate(-360deg)} }
+.scrum-center { text-align: center; }
+.scrum-center h4 { color: var(--white); font-size: 1rem; }
+.scrum-center p  { font-family: var(--f-mono); font-size: 0.62rem; color: var(--teal); }
+.scrum-node {
+  position: absolute; width: 72px; height: 72px; border-radius: 50%;
+  background: var(--panel); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.68rem; font-weight: 700; text-align: center; color: var(--text);
+  cursor: default; transition: border-color 0.3s;
+}
+.scrum-node:hover { border-color: var(--teal); color: var(--teal); }
+
+/* ════════════════════════════════════════════════
+   EXPERIENCE TIMELINE
+════════════════════════════════════════════════ */
+#experience { background: var(--void); }
+.exp-timeline { position: relative; }
+.exp-timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--border); transform: translateX(-50%); }
+.exp-item { display: grid; grid-template-columns: 1fr 60px 1fr; gap: 0; margin-bottom: 48px; align-items: start; }
+.exp-item:nth-child(even) .exp-content { grid-column: 3; }
+.exp-item:nth-child(even) .exp-spacer { grid-column: 2; }
+.exp-item:nth-child(even) .exp-empty { grid-column: 1; }
+.exp-dot { width: 16px; height: 16px; border-radius: 50%; background: var(--panel); border: 2px solid var(--teal); margin: 0 auto; position: relative; z-index: 1; box-shadow: 0 0 12px rgba(56,189,248,0.3); margin-top: 24px; }
+.exp-card {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 12px; padding: 24px; transition: border-color 0.3s, transform 0.3s;
+}
+.exp-card:hover { border-color: rgba(56,189,248,0.25); transform: translateY(-3px); }
+.exp-year { font-family: var(--f-mono); font-size: 0.62rem; color: var(--gold); letter-spacing: 0.12em; margin-bottom: 8px; }
+.exp-role { font-size: 0.95rem; font-weight: 700; color: var(--white); }
+.exp-company { font-size: 0.82rem; color: var(--teal); margin-bottom: 12px; }
+.exp-wins { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
+.exp-win { font-size: 0.8rem; color: var(--text-2); display: flex; gap: 8px; }
+.exp-win::before { content: '▸'; color: var(--teal); flex-shrink: 0; }
+
+/* ════════════════════════════════════════════════
+   CERTIFICATIONS
+════════════════════════════════════════════════ */
+#certs { background: var(--depth); }
+.certs-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+.cert-card {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 12px; padding: 28px 20px; text-align: center;
+  transition: all 0.3s var(--ease); position: relative; overflow: hidden;
+}
+.cert-card::before {
+  content: ''; position: absolute; top: -40px; left: 50%; transform: translateX(-50%);
+  width: 120px; height: 120px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(56,189,248,0.08), transparent 70%);
+}
+.cert-card:hover { transform: translateY(-6px); border-color: rgba(245,158,11,0.3); box-shadow: 0 20px 48px rgba(0,0,0,0.3); }
+.cert-badge { font-size: 2.8rem; display: block; margin-bottom: 16px; }
+.cert-org   { font-family: var(--f-mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+.cert-name  { font-family: var(--f-display); font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+.cert-year  { font-family: var(--f-mono); font-size: 0.65rem; color: var(--text-3); }
+.cert-verify {
+  margin-top: 16px; font-family: var(--f-mono); font-size: 0.58rem;
+  color: var(--green); background: rgba(16,185,129,0.1);
+  border: 1px solid rgba(16,185,129,0.2); border-radius: 4px;
+  padding: 5px 10px; display: inline-flex; align-items: center; gap: 5px;
+}
+
+/* ════════════════════════════════════════════════
+   LEADERSHIP
+════════════════════════════════════════════════ */
+#leadership { background: var(--void); }
+.leadership-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.philosophy-card {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 12px; padding: 32px;
+  transition: all 0.3s var(--ease);
+}
+.philosophy-card:hover { border-color: rgba(56,189,248,0.2); transform: translateY(-3px); }
+.ph-icon { font-size: 2rem; margin-bottom: 16px; display: block; }
+.ph-quote {
+  font-family: var(--f-display); font-size: 1.1rem; font-style: italic;
+  color: var(--white); line-height: 1.5; margin-bottom: 12px;
+}
+.ph-quote::before { content: '"'; color: var(--teal); font-size: 1.5rem; }
+.ph-quote::after  { content: '"'; color: var(--teal); font-size: 1.5rem; }
+
+/* ════════════════════════════════════════════════
+   CONTACT
+════════════════════════════════════════════════ */
+#contact { background: var(--depth); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
+.contact-info h2 { margin-bottom: 20px; }
+.contact-info p  { margin-bottom: 36px; }
+.contact-links   { display: flex; flex-direction: column; gap: 12px; }
+.clink {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 20px; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--panel);
+  text-decoration: none; color: var(--text-2);
+  transition: all 0.25s var(--ease);
+}
+.clink:hover { border-color: rgba(56,189,248,0.3); color: var(--teal); transform: translateX(4px); }
+.clink-icon { font-size: 1.2rem; }
+.clink-label { font-family: var(--f-mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); display: block; }
+.clink-value { font-size: 0.88rem; font-weight: 600; }
+.clink-arrow { margin-left: auto; font-size: 0.9rem; transition: transform 0.2s; }
+.clink:hover .clink-arrow { transform: translate(3px,-3px); }
+
+/* Form */
+.form-group { margin-bottom: 16px; }
+.form-label { font-family: var(--f-mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-3); display: block; margin-bottom: 8px; }
+.form-input {
+  width: 100%; padding: 12px 16px; border-radius: 8px;
+  background: var(--panel); border: 1px solid var(--border);
+  color: var(--text); font-family: var(--f-body); font-size: 0.9rem;
+  outline: none; transition: border-color 0.2s;
+}
+.form-input:focus { border-color: rgba(56,189,248,0.4); }
+.form-input::placeholder { color: var(--text-3); }
+textarea.form-input { min-height: 120px; resize: vertical; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+/* ════════════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════════════ */
+#footer { background: var(--void); border-top: 1px solid var(--border-2); padding: 40px 0; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; }
+.footer-logo { font-family: var(--f-display); font-size: 1.1rem; color: var(--white); }
+.footer-logo span { color: var(--teal); }
+.footer-copy { font-family: var(--f-mono); font-size: 0.62rem; color: var(--text-3); }
+.footer-certs { display: flex; gap: 8px; }
+.footer-cert { font-family: var(--f-mono); font-size: 0.58rem; padding: 4px 10px; border: 1px solid var(--border); border-radius: 4px; color: var(--text-3); }
+
+/* ════════════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .wrap { padding: 0 24px; }
+  .about-grid, .projects-intro, .project-detail-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .dash-grid { grid-template-columns: 1fr; }
+  .dash-widget.span2 { grid-column: auto; }
+  .certs-grid { grid-template-columns: 1fr 1fr; }
+  .playbook-grid { grid-template-columns: 1fr 1fr; }
+  .hero-kanban { display: none; }
+  .vel-widget { display: none; }
+  .exp-timeline::before { left: 20px; }
+  .exp-item { grid-template-columns: 40px 1fr; }
+  .exp-item:nth-child(even) .exp-content, .exp-item:nth-child(odd) .exp-content { grid-column: 2; }
+  .exp-item:nth-child(even) .exp-empty, .exp-item:nth-child(odd) .exp-empty { display: none; }
+  .leadership-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .section { padding: 80px 0; }
+  h1 { font-size: 2.4rem; }
+  .counter-row { flex-wrap: wrap; }
+  .counter-item { flex: 1 1 40%; }
+  .certs-grid { grid-template-columns: 1fr; }
+  .playbook-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .skills-panel.active { grid-template-columns: repeat(2,1fr); }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+  .footer-certs { justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════
+     NAV
+════════════════════════════════════════════════ -->
+<nav id="nav">
+  <div class="wrap nav-wrap">
+    <div class="nav-logo">Shivangi<span>.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#playbook">Playbook</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certs">Certifications</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="#contact" class="nav-pill"><span class="dot"></span>Open to Opportunities</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-grid-bg"></div>
+
+  <!-- Floating velocity widget -->
+  <div class="vel-widget rev">
+    <div class="vw-title">Sprint Velocity</div>
+    <div class="vw-bars">
+      <div class="vw-bar" style="height:60%"></div>
+      <div class="vw-bar" style="height:72%"></div>
+      <div class="vw-bar" style="height:65%"></div>
+      <div class="vw-bar" style="height:80%"></div>
+      <div class="vw-bar" style="height:76%"></div>
+      <div class="vw-bar" style="height:88%"></div>
+      <div class="vw-bar" style="height:92%"></div>
+      <div class="vw-bar" style="height:100%"></div>
+    </div>
+    <div class="vw-val">54 <span style="font-size:1rem;color:var(--text-3)">pts</span></div>
+    <div class="vw-sub">↑ 25% this quarter</div>
+  </div>
+
+  <!-- Floating Kanban cards -->
+  <div class="hero-kanban">
+    <div class="kcard">
+      <div class="kcard-header">
+        <span class="kcard-id">MF-2847</span>
+        <span class="tag tag--green" style="font-size:0.55rem;">Done</span>
+      </div>
+      <div class="kcard-title">Collections App — Sprint 14 Delivery</div>
+      <div class="kcard-bar"><div class="kcard-fill" style="width:100%;background:var(--green)"></div></div>
+      <div class="kcard-meta"><span>3 squads · 30 members</span><span>13 pts</span></div>
+    </div>
+    <div class="kcard">
+      <div class="kcard-header">
+        <span class="kcard-id">FP-1192</span>
+        <span class="tag tag--teal" style="font-size:0.55rem;">In Progress</span>
+      </div>
+      <div class="kcard-title">Mirakl Seller Portal Integration</div>
+      <div class="kcard-bar"><div class="kcard-fill" style="width:78%;background:var(--teal)"></div></div>
+      <div class="kcard-meta"><span>Seller Onboarding</span><span>8 pts</span></div>
+    </div>
+    <div class="kcard">
+      <div class="kcard-header">
+        <span class="kcard-id">GOR-0441</span>
+        <span class="tag tag--gold" style="font-size:0.55rem;">Review</span>
+      </div>
+      <div class="kcard-title">SAP CDC × Hybris Integration — 50+ Stories</div>
+      <div class="kcard-bar"><div class="kcard-fill" style="width:92%;background:var(--gold)"></div></div>
+      <div class="kcard-meta"><span>15% reg. improvement</span><span>21 pts</span></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="hero-content">
+      <div class="hero-eyebrow rev">Delhi, India · 9+ Years Experience · Open to Global Roles</div>
+      <h1 class="rev d1">Shivangi<br><em>Kaushik</em></h1>
+      <div class="hero-sub rev d2">Technical Project Manager | Scrum Master | Agile Delivery Lead</div>
+      <p class="rev d3">Driving Agile Delivery, Digital Transformation, and High-Impact Enterprise Execution across eCommerce, SAP, and distributed global technology programmes.</p>
+      <div class="hero-actions rev d4">
+        <a href="#projects" class="btn btn-teal">View Case Studies ↓</a>
+        <a href="#contact" class="btn btn-gold">Contact Me</a>
+        <a href="#" class="btn btn-ghost">Download Resume ↗</a>
+      </div>
+
+      <div class="counter-row rev d5">
+        <div class="counter-item">
+          <span class="counter-num" data-target="9">0<span>+</span></span>
+          <span class="counter-lbl">Years Experience</span>
+        </div>
+        <div class="counter-item">
+          <span class="counter-num" data-target="6">0<span>+</span></span>
+          <span class="counter-lbl">Agile Transformations</span>
+        </div>
+        <div class="counter-item">
+          <span class="counter-num" data-target="30">0<span>+</span></span>
+          <span class="counter-lbl">Team Members Led</span>
+        </div>
+        <div class="counter-item">
+          <span class="counter-num" data-target="25">0<span>%</span></span>
+          <span class="counter-lbl">Delivery Improvement</span>
+        </div>
+        <div class="counter-item">
+          <span class="counter-num" data-target="15">0<span>%</span></span>
+          <span class="counter-lbl">Conversion Lift</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ticker -->
+  <div class="hero-ticker">
+    <div class="ticker-track">
+      <div class="ticker-item">MF-2847 Delivery Completed <span class="tpill ticker-done">DONE</span></div>
+      <div class="ticker-item">Sprint 14 Velocity: 54 pts <span class="tpill ticker-done">↑25%</span></div>
+      <div class="ticker-item">FairPrice Mirakl Integration <span class="tpill ticker-prog">IN PROGRESS</span></div>
+      <div class="ticker-item">SAP CDC Integration Gorenje <span class="tpill ticker-done">DELIVERED</span></div>
+      <div class="ticker-item">15% Customer Registration Improvement <span class="tpill ticker-done">ACHIEVED</span></div>
+      <div class="ticker-item">Starbucks Support Ops <span class="tpill ticker-done">COMPLETED</span></div>
+      <div class="ticker-item">PI Planning Q2 — 5 Teams Aligned <span class="tpill ticker-done">DONE</span></div>
+      <div class="ticker-item">CSPO Certified 2022 <span class="tpill ticker-done">VERIFIED</span></div>
+      <div class="ticker-item">Integration Turnaround 8wk→6wk <span class="tpill ticker-done">-25%</span></div>
+      <div class="ticker-item">3 Cross-Functional Squads Led <span class="tpill ticker-prog">ONGOING</span></div>
+      <!-- duplicate -->
+      <div class="ticker-item">MF-2847 Delivery Completed <span class="tpill ticker-done">DONE</span></div>
+      <div class="ticker-item">Sprint 14 Velocity: 54 pts <span class="tpill ticker-done">↑25%</span></div>
+      <div class="ticker-item">FairPrice Mirakl Integration <span class="tpill ticker-prog">IN PROGRESS</span></div>
+      <div class="ticker-item">SAP CDC Integration Gorenje <span class="tpill ticker-done">DELIVERED</span></div>
+      <div class="ticker-item">15% Customer Registration Improvement <span class="tpill ticker-done">ACHIEVED</span></div>
+      <div class="ticker-item">Starbucks Support Ops <span class="tpill ticker-done">COMPLETED</span></div>
+      <div class="ticker-item">PI Planning Q2 — 5 Teams Aligned <span class="tpill ticker-done">DONE</span></div>
+      <div class="ticker-item">CSPO Certified 2022 <span class="tpill ticker-done">VERIFIED</span></div>
+      <div class="ticker-item">Integration Turnaround 8wk→6wk <span class="tpill ticker-done">-25%</span></div>
+      <div class="ticker-item">3 Cross-Functional Squads Led <span class="tpill ticker-prog">ONGOING</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════ -->
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <div class="about-photo rev">
+          <img src="https://drive.google.com/file/d/1Sg9c2wNgZ1x7_AGRz92wQEtXGkX27adv/view?usp=sharing" style="width:100%;height:100%;object-fit:cover;">
+          <div class="about-photo-badge">Delhi, India 📍</div>
+        </div>
+
+        <div style="margin-top:48px">
+          <div class="label rev">Career Path</div>
+          <div class="timeline rev d1">
+            <div class="tl-item">
+              <div class="tl-year">2022 — Present</div>
+              <div class="tl-role">Project Manager</div>
+              <div class="tl-company">Tech Mahindra</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2019 — 2022</div>
+              <div class="tl-role">Business Consultant</div>
+              <div class="tl-company">Capgemini</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2017 — 2019</div>
+              <div class="tl-role">Consultant</div>
+              <div class="tl-company">Accenture</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2015 — 2017</div>
+              <div class="tl-role">Analyst</div>
+              <div class="tl-company">Cognizant</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="label rev">About Me</div>
+        <h2 class="rev d1">Enterprise Agile Leader with a<br><em style="color:var(--teal)">Technical Edge</em></h2>
+        <div class="about-line rev d2"></div>
+        <p class="rev d2" style="margin-bottom:16px;">I'm a Technical Project Manager and Scrum Master with 9+ years driving Agile delivery and digital transformation across eCommerce and enterprise platforms. My background bridges the gap between technical execution and strategic leadership.</p>
+        <p class="rev d3" style="margin-bottom:16px;">From orchestrating SAP Commerce Cloud integrations to facilitating PI Planning across globally distributed teams spanning India, Singapore, Europe, and the US — I bring both the Agile discipline and the technical fluency to deliver at enterprise scale.</p>
+        <p class="rev d4">My approach centres on data-driven delivery, psychological safety in teams, and relentless focus on outcomes over outputs.</p>
+
+        <div class="about-line rev d4" style="margin-top:32px;"></div>
+        <div class="kpi-grid rev d5">
+          <div class="kpi-card">
+            <div class="kpi-num" style="color:var(--teal)">9+</div>
+            <div class="kpi-lbl">Years Agile Delivery</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-num" style="color:var(--gold)">30+</div>
+            <div class="kpi-lbl">Team Members Managed</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-num" style="color:var(--green)">4</div>
+            <div class="kpi-lbl">Global Delivery Regions</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-num" style="color:var(--violet)">50+</div>
+            <div class="kpi-lbl">User Stories Authored</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     SKILLS
+════════════════════════════════════════════════ -->
+<section id="skills" class="section">
+  <div class="wrap">
+    <div class="label rev">Expertise</div>
+    <h2 class="rev d1">Skills & <em style="color:var(--teal)">Capabilities</em></h2>
+    <p class="rev d2" style="max-width:560px;margin-top:12px;margin-bottom:40px;">Breadth across Agile delivery, enterprise technology, and cross-functional leadership — each grounded in years of hands-on execution.</p>
+
+    <div class="skills-tabs rev d3">
+      <button class="skill-tab active" onclick="showSkillPanel('agile',this)">Agile & Delivery</button>
+      <button class="skill-tab" onclick="showSkillPanel('tech',this)">Technical</button>
+      <button class="skill-tab" onclick="showSkillPanel('tools',this)">Tools & Platforms</button>
+      <button class="skill-tab" onclick="showSkillPanel('leadership',this)">Leadership</button>
+    </div>
+
+    <div id="panel-agile" class="skills-panel active rev d4">
+      <div class="skill-item"><span class="skill-icon">🔄</span><div class="skill-name">Agile Scrum</div><div class="skill-level"><div class="skill-level-fill" style="width:97%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">📋</span><div class="skill-name">Kanban</div><div class="skill-level"><div class="skill-level-fill" style="width:92%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">📅</span><div class="skill-name">Sprint Planning</div><div class="skill-level"><div class="skill-level-fill" style="width:96%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">📝</span><div class="skill-name">Backlog Grooming</div><div class="skill-level"><div class="skill-level-fill" style="width:95%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🚀</span><div class="skill-name">Release Mgmt</div><div class="skill-level"><div class="skill-level-fill" style="width:90%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">⚡</span><div class="skill-name">Capacity Planning</div><div class="skill-level"><div class="skill-level-fill" style="width:88%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">📈</span><div class="skill-name">Velocity Tracking</div><div class="skill-level"><div class="skill-level-fill" style="width:94%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🔥</span><div class="skill-name">Burndown Monitor</div><div class="skill-level"><div class="skill-level-fill" style="width:91%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🏗️</span><div class="skill-name">SAFe Agile</div><div class="skill-level"><div class="skill-level-fill" style="width:85%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🔀</span><div class="skill-name">Hybrid Delivery</div><div class="skill-level"><div class="skill-level-fill" style="width:87%"></div></div></div>
+    </div>
+    <div id="panel-tech" class="skills-panel rev d4">
+      <div class="skill-item"><span class="skill-icon">🔌</span><div class="skill-name">REST APIs</div><div class="skill-level"><div class="skill-level-fill" style="width:85%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🗄️</span><div class="skill-name">SQL</div><div class="skill-level"><div class="skill-level-fill" style="width:78%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🛒</span><div class="skill-name">SAP Commerce Cloud</div><div class="skill-level"><div class="skill-level-fill" style="width:88%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🔐</span><div class="skill-name">SAP CDC</div><div class="skill-level"><div class="skill-level-fill" style="width:86%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🔗</span><div class="skill-name">API Integrations</div><div class="skill-level"><div class="skill-level-fill" style="width:83%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">⚙️</span><div class="skill-name">CI/CD Coord.</div><div class="skill-level"><div class="skill-level-fill" style="width:80%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🧪</span><div class="skill-name">UAT Coordination</div><div class="skill-level"><div class="skill-level-fill" style="width:92%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🛠️</span><div class="skill-name">Production Support</div><div class="skill-level"><div class="skill-level-fill" style="width:88%"></div></div></div>
+    </div>
+    <div id="panel-tools" class="skills-panel rev d4">
+      <div class="skill-item"><span class="skill-icon">🎯</span><div class="skill-name">Jira</div><div class="skill-level"><div class="skill-level-fill" style="width:98%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">📄</span><div class="skill-name">Confluence</div><div class="skill-level"><div class="skill-level-fill" style="width:95%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🔵</span><div class="skill-name">Azure DevOps</div><div class="skill-level"><div class="skill-level-fill" style="width:82%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">📊</span><div class="skill-name">Smartsheet</div><div class="skill-level"><div class="skill-level-fill" style="width:88%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🎨</span><div class="skill-name">Figma</div><div class="skill-level"><div class="skill-level-fill" style="width:75%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">📐</span><div class="skill-name">Draw.io</div><div class="skill-level"><div class="skill-level-fill" style="width:85%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🎙️</span><div class="skill-name">Otter.ai</div><div class="skill-level"><div class="skill-level-fill" style="width:80%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🗂️</span><div class="skill-name">MS Project</div><div class="skill-level"><div class="skill-level-fill" style="width:84%"></div></div></div>
+    </div>
+    <div id="panel-leadership" class="skills-panel rev d4">
+      <div class="skill-item"><span class="skill-icon">🤝</span><div class="skill-name">Stakeholder Mgmt</div><div class="skill-level"><div class="skill-level-fill" style="width:96%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🌐</span><div class="skill-name">Cross-functional Lead</div><div class="skill-level"><div class="skill-level-fill" style="width:94%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">📦</span><div class="skill-name">Vendor Coordination</div><div class="skill-level"><div class="skill-level-fill" style="width:88%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🛡️</span><div class="skill-name">Risk Mitigation</div><div class="skill-level"><div class="skill-level-fill" style="width:92%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">📋</span><div class="skill-name">RAID Management</div><div class="skill-level"><div class="skill-level-fill" style="width:90%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">📞</span><div class="skill-name">Client Communication</div><div class="skill-level"><div class="skill-level-fill" style="width:95%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">🎭</span><div class="skill-name">Team Facilitation</div><div class="skill-level"><div class="skill-level-fill" style="width:97%"></div></div></div>
+      <div class="skill-item"><span class="skill-icon">💡</span><div class="skill-name">Digital Transformation</div><div class="skill-level"><div class="skill-level-fill" style="width:89%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     AGILE DASHBOARD
+════════════════════════════════════════════════ -->
+<section id="dashboard">
+  <div class="wrap">
+    <div class="label rev">Live Analytics</div>
+    <h2 class="rev d1">Agile Delivery <em style="color:var(--teal)">Dashboard</em></h2>
+    <p class="rev d2" style="max-width:560px;margin-top:12px;margin-bottom:48px;">Real-time programme health, sprint performance, and team capacity visualised across active delivery engagements.</p>
+
+    <div class="dash-grid">
+      <!-- Velocity Chart -->
+      <div class="dash-widget rev">
+        <div class="dw-header">
+          <span class="dw-title">Sprint Velocity — 8 Sprints</span>
+          <span class="dw-badge tag--teal">COMMITTED vs DELIVERED</span>
+        </div>
+        <div class="vel-chart" id="velChart"></div>
+      </div>
+
+      <!-- Burndown -->
+      <div class="dash-widget rev d1">
+        <div class="dw-header">
+          <span class="dw-title">Burndown — Sprint 14</span>
+          <span class="dw-badge tag--green">ON TRACK</span>
+        </div>
+        <svg class="burndown-svg" viewBox="0 0 300 120" id="burndownSvg">
+          <!-- Ideal line -->
+          <polyline points="0,10 300,110" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" stroke-dasharray="4,4"/>
+          <!-- Actual -->
+          <polyline id="burndownLine" points="0,10 30,18 60,28 90,35 120,50 150,58 180,72 210,80 240,90 270,98 300,107"
+            fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round"
+            style="stroke-dasharray:500;stroke-dashoffset:500;animation:drawLine 2s 0.5s var(--ease) forwards"/>
+          <!-- Remaining shading -->
+          <polyline points="0,10 30,18 60,28 90,35 120,50 150,58 180,72 210,80 240,90 270,98 300,107 300,120 0,120"
+            fill="rgba(56,189,248,0.05)" stroke="none"/>
+          <text x="8" y="108" fill="rgba(255,255,255,0.2)" font-size="8" font-family="Fira Code">0 pts remaining</text>
+          <text x="240" y="10" fill="var(--teal)" font-size="8" font-family="Fira Code">54 pts</text>
+        </svg>
+        <style>@keyframes drawLine{to{stroke-dashoffset:0}}</style>
+        <div style="display:flex;gap:16px;margin-top:8px;font-family:var(--f-mono);font-size:0.6rem;color:var(--text-3);">
+          <span style="display:flex;align-items:center;gap:6px;"><span style="width:16px;height:2px;background:var(--teal);display:block"></span>Actual</span>
+          <span style="display:flex;align-items:center;gap:6px;"><span style="width:16px;height:2px;background:rgba(255,255,255,0.15);display:block"></span>Ideal</span>
+        </div>
+      </div>
+
+      <!-- Release Progress -->
+      <div class="dash-widget rev d2">
+        <div class="dw-header">
+          <span class="dw-title">Release Progress — Q2 2025</span>
+          <span class="dw-badge tag--gold">3 RELEASES</span>
+        </div>
+        <div class="prog-list">
+          <div class="prog-item">
+            <div class="prog-header"><span class="prog-name">Collections App v2.4</span><span class="prog-pct">100%</span></div>
+            <div class="prog-track"><div class="prog-fill" style="width:100%;background:var(--green)"></div></div>
+          </div>
+          <div class="prog-item">
+            <div class="prog-header"><span class="prog-name">Mirakl Seller Portal</span><span class="prog-pct">78%</span></div>
+            <div class="prog-track"><div class="prog-fill" style="width:78%;background:var(--teal)"></div></div>
+          </div>
+          <div class="prog-item">
+            <div class="prog-header"><span class="prog-name">SAP CDC Integration</span><span class="prog-pct">100%</span></div>
+            <div class="prog-track"><div class="prog-fill" style="width:100%;background:var(--green)"></div></div>
+          </div>
+          <div class="prog-item">
+            <div class="prog-header"><span class="prog-name">Starbucks Support v3</span><span class="prog-pct">100%</span></div>
+            <div class="prog-track"><div class="prog-fill" style="width:100%;background:var(--green)"></div></div>
+          </div>
+          <div class="prog-item">
+            <div class="prog-header"><span class="prog-name">API Gateway Upgrade</span><span class="prog-pct">44%</span></div>
+            <div class="prog-track"><div class="prog-fill" style="width:44%;background:var(--gold)"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Capacity -->
+      <div class="dash-widget rev d3">
+        <div class="dw-header">
+          <span class="dw-title">Team Capacity — Sprint 14</span>
+          <span class="dw-badge tag--teal">5 MEMBERS</span>
+        </div>
+        <div class="prog-list">
+          <div class="capacity-row">
+            <div class="cap-avatar" style="background:rgba(56,189,248,0.2);color:var(--teal)">SK</div>
+            <div class="cap-name">Shivangi K.</div>
+            <div class="cap-bar"><div class="cap-fill" style="width:85%;background:var(--teal)"></div></div>
+            <div class="cap-pct">85%</div>
+          </div>
+          <div class="capacity-row">
+            <div class="cap-avatar" style="background:rgba(245,158,11,0.2);color:var(--gold)">AK</div>
+            <div class="cap-name">Arjun K.</div>
+            <div class="cap-bar"><div class="cap-fill" style="width:90%;background:var(--gold)"></div></div>
+            <div class="cap-pct">90%</div>
+          </div>
+          <div class="capacity-row">
+            <div class="cap-avatar" style="background:rgba(16,185,129,0.2);color:var(--green)">PS</div>
+            <div class="cap-name">Priya S.</div>
+            <div class="cap-bar"><div class="cap-fill" style="width:70%;background:var(--green)"></div></div>
+            <div class="cap-pct">70%</div>
+          </div>
+          <div class="capacity-row">
+            <div class="cap-avatar" style="background:rgba(139,92,246,0.2);color:var(--violet)">MR</div>
+            <div class="cap-name">Mark R.</div>
+            <div class="cap-bar"><div class="cap-fill" style="width:95%;background:var(--violet)"></div></div>
+            <div class="cap-pct">95%</div>
+          </div>
+          <div class="capacity-row">
+            <div class="cap-avatar" style="background:rgba(244,63,94,0.2);color:var(--rose)">LT</div>
+            <div class="cap-name">Li T.</div>
+            <div class="cap-bar"><div class="cap-fill" style="width:60%;background:var(--rose)"></div></div>
+            <div class="cap-pct">60%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delivery Health -->
+      <div class="dash-widget span2 rev d4">
+        <div class="dw-header">
+          <span class="dw-title">Delivery Health Indicators</span>
+          <span class="dw-badge tag--green">OVERALL: HEALTHY</span>
+        </div>
+        <div class="health-grid">
+          <div class="health-item"><div class="health-dot" style="background:var(--green);box-shadow:0 0 8px rgba(16,185,129,0.5)"></div><div class="health-name">Sprint Goal Met</div><div style="font-family:var(--f-display);font-size:1.2rem;color:var(--white);margin-top:4px">93%</div></div>
+          <div class="health-item"><div class="health-dot" style="background:var(--green);box-shadow:0 0 8px rgba(16,185,129,0.5)"></div><div class="health-name">DoD Adherence</div><div style="font-family:var(--f-display);font-size:1.2rem;color:var(--white);margin-top:4px">98%</div></div>
+          <div class="health-item"><div class="health-dot" style="background:var(--teal);box-shadow:0 0 8px rgba(56,189,248,0.5)"></div><div class="health-name">Avg Cycle Time</div><div style="font-family:var(--f-display);font-size:1.2rem;color:var(--white);margin-top:4px">2.8d</div></div>
+          <div class="health-item"><div class="health-dot" style="background:var(--green);box-shadow:0 0 8px rgba(16,185,129,0.5)"></div><div class="health-name">Defect Escape Rate</div><div style="font-family:var(--f-display);font-size:1.2rem;color:var(--white);margin-top:4px">1.1%</div></div>
+          <div class="health-item"><div class="health-dot" style="background:var(--gold);box-shadow:0 0 8px rgba(245,158,11,0.4)"></div><div class="health-name">Blocker Avg Resolution</div><div style="font-family:var(--f-display);font-size:1.2rem;color:var(--white);margin-top:4px">4.2h</div></div>
+          <div class="health-item"><div class="health-dot" style="background:var(--green);box-shadow:0 0 8px rgba(16,185,129,0.5)"></div><div class="health-name">Team Satisfaction</div><div style="font-family:var(--f-display);font-size:1.2rem;color:var(--white);margin-top:4px">4.6/5</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     CASE STUDIES
+════════════════════════════════════════════════ -->
+<section id="projects" class="section">
+  <div class="wrap">
+    <div class="projects-intro">
+      <div>
+        <div class="label rev">Case Studies</div>
+        <h2 class="rev d1">Enterprise<br><em style="color:var(--teal)">Project Portfolio</em></h2>
+      </div>
+      <div class="rev d2">
+        <p>Four landmark engagements showcasing end-to-end Agile programme delivery — from inception through stakeholder alignment, execution, and measurable outcomes.</p>
+        <p style="margin-top:12px;">Click any project to expand the full case study.</p>
+      </div>
+    </div>
+
+    <!-- Project 1 -->
+    <div class="project-card rev" id="proj1">
+      <div class="project-banner" style="background:linear-gradient(90deg,var(--teal),var(--green))"></div>
+      <div class="project-header" onclick="toggleProject('proj1')">
+        <div class="project-num">01</div>
+        <div>
+          <h3 style="color:var(--white)">Mahindra Finance — Collections App</h3>
+          <div class="project-tags">
+            <span class="tag tag--teal">Fintech</span>
+            <span class="tag tag--green">Agile Delivery</span>
+            <span class="tag tag--teal">3 Squads · 30+ Members</span>
+            <span class="tag tag--green">25% Delivery Improvement</span>
+          </div>
+        </div>
+        <div class="project-toggle" onclick="event.stopPropagation();toggleProject('proj1')">+</div>
+      </div>
+      <div class="project-detail">
+        <div class="project-detail-grid">
+          <div>
+            <h4 style="color:var(--teal);margin-bottom:12px;">Business Challenge</h4>
+            <p>Mahindra Finance required a mobile Collections Application to streamline field operations for their loan recovery teams. The programme demanded orchestration of 3 cross-functional squads spanning backend engineering, mobile development, and QA — with aggressive time-to-market pressure.</p>
+            <h4 style="color:var(--teal);margin:20px 0 12px;">Delivery Approach</h4>
+            <p>Led a SAFe-aligned Agile delivery programme with 2-week sprint cadences, PI Planning across 3 ARTs, and a rigorous RAID log maintained throughout. Served as the primary Scrum Master and delivery coordinator — removing blockers, facilitating ceremonies, and maintaining full sprint board visibility in Jira.</p>
+            <div class="achievement-list">
+              <div class="ach-item"><span class="ach-icon">✓</span><span class="ach-text">Led <strong>3 cross-functional squads</strong> comprising 30+ engineers, QA, BA, and DevOps</span></div>
+              <div class="ach-item"><span class="ach-icon">✓</span><span class="ach-text">Improved <strong>sprint predictability by 25%</strong> through capacity planning and WIP limits</span></div>
+              <div class="ach-item"><span class="ach-icon">✓</span><span class="ach-text">Maintained Jira dashboards providing <strong>real-time delivery visibility</strong> to C-suite stakeholders</span></div>
+              <div class="ach-item"><span class="ach-icon">✓</span><span class="ach-text">Coordinated <strong>CI/CD pipeline gates</strong> and UAT cycles with zero production regressions</span></div>
+              <div class="ach-item"><span class="ach-icon">✓</span><span class="ach-text">Managed <strong>defect triage and deployment coordination</strong> across 6 production releases</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="mini-sprint-board" style="margin-bottom:16px;">
+              <div style="font-family:var(--f-mono);font-size:0.6rem;color:var(--text-3);margin-bottom:12px;letter-spacing:0.12em;text-transform:uppercase;">Sprint Board — Collections App</div>
+              <div class="msb-cols">
+                <div class="msb-col">
+                  <div class="msb-head todo">To Do</div>
+                  <div class="msb-ticket"><div class="msb-ticket-id">MF-411</div>Offline Sync Logic</div>
+                  <div class="msb-ticket"><div class="msb-ticket-id">MF-413</div>Push Notifications</div>
+                </div>
+                <div class="msb-col">
+                  <div class="msb-head inprog">In Prog</div>
+                  <div class="msb-ticket"><div class="msb-ticket-id">MF-407</div>Loan Detail View</div>
+                  <div class="msb-ticket"><div class="msb-ticket-id">MF-409</div>Payment Gateway</div>
+                </div>
+                <div class="msb-col">
+                  <div class="msb-head review">Review</div>
+                  <div class="msb-ticket"><div class="msb-ticket-id">MF-401</div>Auth Module</div>
+                </div>
+                <div class="msb-col">
+                  <div class="msb-head done">Done</div>
+                  <div class="msb-ticket"><div class="msb-ticket-id">MF-392</div>Dashboard UI</div>
+                  <div class="msb-ticket"><div class="msb-ticket-id">MF-395</div>Data Models</div>
+                </div>
+              </div>
+            </div>
+            <div class="metrics-2x2">
+              <div class="m-cell"><div class="m-big">30+</div><div class="m-lbl">Team Members</div></div>
+              <div class="m-cell"><div class="m-big" style="color:var(--green)">25%</div><div class="m-lbl">Sprint Predictability ↑</div></div>
+              <div class="m-cell"><div class="m-big" style="color:var(--gold)">6</div><div class="m-lbl">Prod Releases</div></div>
+              <div class="m-cell"><div class="m-big" style="color:var(--violet)">3</div><div class="m-lbl">Squads Led</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card rev d1" id="proj2">
+      <div class="project-banner" style="background:linear-gradient(90deg,var(--gold),var(--rose))"></div>
+      <div class="project-header" onclick="toggleProject('proj2')">
+        <div class="project-num">02</div>
+        <div>
+          <h3 style="color:var(--white)">FairPrice — Mirakl Marketplace Integration</h3>
+          <div class="project-tags">
+            <span class="tag tag--gold">eCommerce</span>
+            <span class="tag tag--gold">Seller Portal</span>
+            <span class="tag tag--gold">SAP Commerce Cloud</span>
+            <span class="tag tag--gold">Singapore</span>
+          </div>
+        </div>
+        <div class="project-toggle" onclick="event.stopPropagation();toggleProject('proj2')">+</div>
+      </div>
+      <div class="project-detail">
+        <div class="project-detail-grid">
+          <div>
+            <h4 style="color:var(--gold);margin-bottom:12px;">Business Challenge</h4>
+            <p>FairPrice (Singapore's largest grocery retailer) required a Mirakl-powered Seller Portal to enable third-party marketplace vendors. This demanded deep discovery, stakeholder workshop facilitation, and a meticulously groomed backlog translating complex business workflows into 50+ sprint-ready user stories.</p>
+            <h4 style="color:var(--gold);margin:20px 0 12px;">Delivery Approach</h4>
+            <p>Ran discovery sprints with seller-facing and operations stakeholders. Authored comprehensive user stories with BDD-style acceptance criteria. Designed workflow diagrams in Draw.io for seller onboarding, catalogue management, and order fulfilment. Prioritised backlog jointly with the Product Owner.</p>
+            <div class="achievement-list">
+              <div class="ach-item"><span class="ach-icon" style="color:var(--gold)">✓</span><span class="ach-text">Delivered <strong>50+ user stories</strong> with full acceptance criteria in 3 discovery sprints</span></div>
+              <div class="ach-item"><span class="ach-icon" style="color:var(--gold)">✓</span><span class="ach-text">Facilitated <strong>stakeholder workshops</strong> across FairPrice Operations, IT, and Sellers</span></div>
+              <div class="ach-item"><span class="ach-icon" style="color:var(--gold)">✓</span><span class="ach-text">Designed <strong>end-to-end seller workflow diagrams</strong> used as system design reference</span></div>
+              <div class="ach-item"><span class="ach-icon" style="color:var(--gold)">✓</span><span class="ach-text">Reduced backlog ambiguity by <strong>40%</strong> through structured DoR process</span></div>
+            </div>
+          </div>
+          <div>
+            <div style="background:var(--panel-2);border-radius:8px;padding:16px;margin-bottom:16px;">
+              <div style="font-family:var(--f-mono);font-size:0.6rem;color:var(--text-3);margin-bottom:12px;letter-spacing:0.12em;text-transform:uppercase;">Sample User Story</div>
+              <div style="background:var(--panel);border:1px solid rgba(245,158,11,0.2);border-radius:6px;padding:14px;">
+                <div style="font-family:var(--f-mono);font-size:0.58rem;color:var(--gold);margin-bottom:6px;">FP-1192 | Story | 8 pts</div>
+                <div style="font-size:0.82rem;color:var(--white);font-weight:600;margin-bottom:8px;">Seller Product Catalogue Upload</div>
+                <div style="font-size:0.78rem;color:var(--text-2);margin-bottom:8px;">As a Seller, I want to bulk-upload my product catalogue via CSV so that I can onboard efficiently without manual entry.</div>
+                <div style="font-family:var(--f-mono);font-size:0.62rem;color:var(--text-3);">AC: CSV validates schema · Errors surface inline · Confirmation email sent · Catalogue live within 15 min</div>
+              </div>
+            </div>
+            <div class="metrics-2x2">
+              <div class="m-cell"><div class="m-big" style="color:var(--gold)">50+</div><div class="m-lbl">User Stories</div></div>
+              <div class="m-cell"><div class="m-big" style="color:var(--gold)">3</div><div class="m-lbl">Discovery Sprints</div></div>
+              <div class="m-cell"><div class="m-big" style="color:var(--gold)">40%</div><div class="m-lbl">Ambiguity Reduction</div></div>
+              <div class="m-cell"><div class="m-big" style="color:var(--gold)">🇸🇬</div><div class="m-lbl">Singapore Delivery</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card rev d2" id="proj3">
+      <div class="project-banner" style="background:linear-gradient(90deg,var(--violet),var(--teal))"></div>
+      <div class="project-header" onclick="toggleProject('proj3')">
+        <div class="project-num">03</div>
+        <div>
+          <h3 style="color:var(--white)">Gorenje — SAP CDC × Hybris Integration</h3>
+          <div class="project-tags">
+            <span class="tag tag--violet">SAP Commerce</span>
+            <span class="tag tag--violet">Global Delivery</span>
+            <span class="tag tag--violet">15% Conversion Lift</span>
+            <span class="tag tag--violet">Europe · India</span>
+          </div>
+        </div>
+        <div class="project-toggle" onclick="event.stopPropagation();toggleProject('proj3')">+</div>
+      </div>
+      <div class="project-detail">
+        <div class="project-detail-grid">
+          <div>
+            <h4 style="color:var(--violet);margin-bottom:12px;">Business Challenge</h4>
+            <p>Gorenje (European home appliance leader) required seamless SAP Customer Data Cloud (CDC) integration with their Hybris eCommerce platform to unify customer identity, improve registration flows, and comply with GDPR requirements across EU markets.</p>
+            <h4 style="color:var(--violet);margin:20px 0 12px;">Delivery Approach</h4>
+            <p>Orchestrated a cross-region delivery team spanning India and Europe. Led Agile backlog grooming producing 50+ integration stories. Managed API contract negotiation between SAP CDC and Hybris teams. Reduced integration turnaround from 8 weeks to 6 weeks through dependency parallelisation and continuous integration discipline.</p>
+            <div class="achievement-list">
+              <div class="ach-item"><span class="ach-icon" style="color:var(--violet)">✓</span><span class="ach-text"><strong>15% improvement</strong> in customer registration completion rate post-integration</span></div>
+              <div class="ach-item"><span class="ach-icon" style="color:var(--violet)">✓</span><span class="ach-text">Reduced integration cycle from <strong>8 weeks → 6 weeks</strong> (25% faster)</span></div>
+              <div class="ach-item"><span class="ach-icon" style="color:var(--violet)">✓</span><span class="ach-text">Created <strong>50+ user stories</strong> covering CDC registration, SSO, profile sync, and consent management</span></div>
+              <div class="ach-item"><span class="ach-icon" style="color:var(--violet)">✓</span><span class="ach-text">Coordinated cross-region teams across <strong>India + European time zones</strong> with async standup model</span></div>
+            </div>
+          </div>
+          <div>
+            <div style="background:var(--panel-2);border-radius:8px;padding:16px;margin-bottom:16px;">
+              <div style="font-family:var(--f-mono);font-size:0.6rem;color:var(--text-3);margin-bottom:12px;letter-spacing:0.12em;text-transform:uppercase;">Integration Architecture — CDC × Hybris</div>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <div style="display:flex;align-items:center;gap:8px;background:var(--panel);border-radius:6px;padding:10px 14px;border:1px solid var(--border-2);">
+                  <span style="font-size:1.1rem">🔐</span>
+                  <div style="font-size:0.78rem;color:var(--text);">SAP CDC — Identity Layer</div>
+                  <div style="margin-left:auto;font-family:var(--f-mono);font-size:0.58rem;color:var(--green)">Active</div>
+                </div>
+                <div style="text-align:center;font-family:var(--f-mono);font-size:0.58rem;color:var(--teal);">⇅ REST API / JWT</div>
+                <div style="display:flex;align-items:center;gap:8px;background:var(--panel);border-radius:6px;padding:10px 14px;border:1px solid var(--border-2);">
+                  <span style="font-size:1.1rem">🛒</span>
+                  <div style="font-size:0.78rem;color:var(--text);">SAP Hybris — Commerce Layer</div>
+                  <div style="margin-left:auto;font-family:var(--f-mono);font-size:0.58rem;color:var(--green)">Active</div>
+                </div>
+                <div style="text-align:center;font-family:var(--f-mono);font-size:0.58rem;color:var(--teal);">⇅ Consent Events</div>
+                <div style="display:flex;align-items:center;gap:8px;background:var(--panel);border-radius:6px;padding:10px 14px;border:1px solid var(--border-2);">
+                  <span style="font-size:1.1rem">🧑</span>
+                  <div style="font-size:0.78rem;color:var(--text);">Customer Portal — EU Markets</div>
+                  <div style="margin-left:auto;font-family:var(--f-mono);font-size:0.58rem;color:var(--green)">GDPR ✓</div>
+                </div>
+              </div>
+            </div>
+            <div class="metrics-2x2">
+              <div class="m-cell"><div class="m-big" style="color:var(--violet)">15%</div><div class="m-lbl">Registration Lift</div></div>
+              <div class="m-cell"><div class="m-big" style="color:var(--violet)">6wk</div><div class="m-lbl">Delivery (was 8wk)</div></div>
+              <div class="m-cell"><div class="m-big" style="color:var(--violet)">50+</div><div class="m-lbl">Stories Created</div></div>
+              <div class="m-cell"><div class="m-big" style="color:var(--violet)">🌍</div><div class="m-lbl">Multi-region</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-card rev d3" id="proj4">
+      <div class="project-banner" style="background:linear-gradient(90deg,var(--rose),var(--gold))"></div>
+      <div class="project-header" onclick="toggleProject('proj4')">
+        <div class="project-num">04</div>
+        <div>
+          <h3 style="color:var(--white)">Starbucks Corporation — Technical Support Operations</h3>
+          <div class="project-tags">
+            <span class="tag tag--rose">Retail Tech</span>
+            <span class="tag tag--rose">Support Operations</span>
+            <span class="tag tag--rose">Production Management</span>
+            <span class="tag tag--rose">Global · US</span>
+          </div>
+        </div>
+        <div class="project-toggle" onclick="event.stopPropagation();toggleProject('proj4')">+</div>
+      </div>
+      <div class="project-detail">
+        <div class="project-detail-grid">
+          <div>
+            <h4 style="color:var(--rose);margin-bottom:12px;">Business Challenge</h4>
+            <p>Starbucks required robust technical support operations across their global eCommerce and in-store technology stack. The programme demanded proactive incident management, deployment support, and continuous improvement of customer-facing digital tools and devices.</p>
+            <h4 style="color:var(--rose);margin:20px 0 12px;">Delivery Approach</h4>
+            <p>Managed production support operations with structured incident triage processes, SLA-based escalation matrices, and daily operational standups. Coordinated deployment issue resolution across global time zones and led team training sessions on new tooling and processes.</p>
+            <div class="achievement-list">
+              <div class="ach-item"><span class="ach-icon" style="color:var(--rose)">✓</span><span class="ach-text">Managed <strong>production incident triage and resolution</strong> for Starbucks digital platforms</span></div>
+              <div class="ach-item"><span class="ach-icon" style="color:var(--rose)">✓</span><span class="ach-text">Coordinated <strong>deployment issue resolution</strong> with engineering and operations teams across US</span></div>
+              <div class="ach-item"><span class="ach-icon" style="color:var(--rose)">✓</span><span class="ach-text">Led <strong>team training programmes</strong> on support tooling, escalation procedures, and device management</span></div>
+              <div class="ach-item"><span class="ach-icon" style="color:var(--rose)">✓</span><span class="ach-text">Improved <strong>customer experience</strong> through proactive device enablement and monitoring</span></div>
+            </div>
+          </div>
+          <div>
+            <div style="background:var(--panel-2);border-radius:8px;padding:16px;margin-bottom:16px;">
+              <div style="font-family:var(--f-mono);font-size:0.6rem;color:var(--text-3);margin-bottom:12px;letter-spacing:0.12em;text-transform:uppercase;">Incident Dashboard — Live Ops</div>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;padding:8px 12px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.15);border-radius:5px;">
+                  <span style="color:var(--text-2)">P1 Open Incidents</span><span style="color:var(--green);font-family:var(--f-mono)">0</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;padding:8px 12px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.15);border-radius:5px;">
+                  <span style="color:var(--text-2)">P2 Under Investigation</span><span style="color:var(--gold);font-family:var(--f-mono)">2</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;padding:8px 12px;background:rgba(56,189,248,0.08);border:1px solid rgba(56,189,248,0.15);border-radius:5px;">
+                  <span style="color:var(--text-2)">P3 Monitoring</span><span style="color:var(--teal);font-family:var(--f-mono)">5</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;padding:8px 12px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.15);border-radius:5px;">
+                  <span style="color:var(--text-2)">Avg Resolution Time (P2)</span><span style="color:var(--green);font-family:var(--f-mono)">3.2h</span>
+                </div>
+              </div>
+            </div>
+            <div class="metrics-2x2">
+              <div class="m-cell"><div class="m-big" style="color:var(--rose)">0</div><div class="m-lbl">P1 Incidents Open</div></div>
+              <div class="m-cell"><div class="m-big" style="color:var(--rose)">3.2h</div><div class="m-lbl">Avg P2 Resolution</div></div>
+              <div class="m-cell"><div class="m-big" style="color:var(--rose)">🇺🇸</div><div class="m-lbl">US Global Coord.</div></div>
+              <div class="m-cell"><div class="m-big" style="color:var(--rose)">98%</div><div class="m-lbl">SLA Adherence</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     SCRUM PLAYBOOK
+════════════════════════════════════════════════ -->
+<section id="playbook" class="section">
+  <div class="wrap">
+    <div class="label rev">Methodology</div>
+    <h2 class="rev d1">Scrum Master <em style="color:var(--teal)">Playbook</em></h2>
+    <p class="rev d2" style="max-width:560px;margin-top:12px;margin-bottom:48px;">A structured approach to Agile facilitation — every ceremony purposefully designed to generate alignment, surface risk early, and accelerate delivery.</p>
+
+    <!-- Scrum cycle visual -->
+    <div style="position:relative;display:flex;justify-content:center;margin-bottom:64px;" class="rev d3">
+      <div style="position:relative;width:280px;height:280px;">
+        <!-- Outer ring -->
+        <svg width="280" height="280" style="position:absolute;top:0;left:0;animation:spinSlow 30s linear infinite">
+          <circle cx="140" cy="140" r="130" fill="none" stroke="rgba(56,189,248,0.1)" stroke-width="1.5" stroke-dasharray="6,10"/>
+        </svg>
+        <!-- Center -->
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:2;">
+          <div style="font-family:var(--f-display);font-size:1.6rem;font-weight:700;color:var(--white)">Agile</div>
+          <div style="font-family:var(--f-mono);font-size:0.62rem;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;">2-Week Sprint</div>
+        </div>
+        <!-- Nodes -->
+        <div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);background:var(--panel);border:1px solid var(--border);border-radius:50%;width:64px;height:64px;display:flex;align-items:center;justify-content:center;font-size:0.68rem;font-weight:700;color:var(--text);text-align:center;cursor:default;z-index:2;">📅<br><span style="font-size:0.58rem">Planning</span></div>
+        <div style="position:absolute;top:22%;right:-32px;transform:translateY(-50%);background:var(--panel);border:1px solid var(--border);border-radius:50%;width:64px;height:64px;display:flex;align-items:center;justify-content:center;font-size:0.68rem;font-weight:700;color:var(--text);text-align:center;z-index:2;">☀️<br><span style="font-size:0.58rem">Standup</span></div>
+        <div style="position:absolute;bottom:-12px;right:10px;background:var(--panel);border:1px solid var(--border);border-radius:50%;width:64px;height:64px;display:flex;align-items:center;justify-content:center;font-size:0.68rem;font-weight:700;color:var(--text);text-align:center;z-index:2;">🎯<br><span style="font-size:0.58rem">Review</span></div>
+        <div style="position:absolute;bottom:-12px;left:10px;background:var(--panel);border:1px solid var(--border);border-radius:50%;width:64px;height:64px;display:flex;align-items:center;justify-content:center;font-size:0.68rem;font-weight:700;color:var(--text);text-align:center;z-index:2;">🔄<br><span style="font-size:0.58rem">Retro</span></div>
+        <div style="position:absolute;top:22%;left:-32px;transform:translateY(-50%);background:var(--panel);border:1px solid var(--border);border-radius:50%;width:64px;height:64px;display:flex;align-items:center;justify-content:center;font-size:0.68rem;font-weight:700;color:var(--text);text-align:center;z-index:2;">📝<br><span style="font-size:0.58rem">Refine</span></div>
+      </div>
+    </div>
+    <style>@keyframes spinSlow { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }</style>
+
+    <div class="playbook-grid">
+      <div class="pb-card rev">
+        <span class="pb-icon">📅</span>
+        <h4>Sprint Planning</h4>
+        <p>Structured 2–4 hour sessions with clear sprint goal definition, capacity-based commitment, and DoR validation before any story enters the sprint.</p>
+        <div class="pb-steps">
+          <div class="pb-step"><span class="pb-step-num">01</span><span>Review sprint goal with PO & stakeholders</span></div>
+          <div class="pb-step"><span class="pb-step-num">02</span><span>Validate team capacity (holidays, leave)</span></div>
+          <div class="pb-step"><span class="pb-step-num">03</span><span>Confirm DoR for each candidate story</span></div>
+          <div class="pb-step"><span class="pb-step-num">04</span><span>Commit sprint backlog · document risks</span></div>
+        </div>
+      </div>
+      <div class="pb-card rev d1">
+        <span class="pb-icon">☀️</span>
+        <h4>Daily Standup</h4>
+        <p>15-minute focused sync. Async-first model for distributed teams. Impediments logged in Jira within the same day for immediate escalation.</p>
+        <div class="pb-steps">
+          <div class="pb-step"><span class="pb-step-num">01</span><span>Progress since yesterday</span></div>
+          <div class="pb-step"><span class="pb-step-num">02</span><span>Today's plan & commitments</span></div>
+          <div class="pb-step"><span class="pb-step-num">03</span><span>Blockers & dependencies flagged</span></div>
+          <div class="pb-step"><span class="pb-step-num">04</span><span>SM escalates blockers within 4 hours</span></div>
+        </div>
+      </div>
+      <div class="pb-card rev d2">
+        <span class="pb-icon">🔄</span>
+        <h4>Retrospective</h4>
+        <p>Blameless retros using rotating formats — 4Ls, Sailboat, STOP/START/CONTINUE. Max 3 action items per sprint with named DRIs and tracked closure.</p>
+        <div class="pb-steps">
+          <div class="pb-step"><span class="pb-step-num">01</span><span>Review previous retro actions (closure)</span></div>
+          <div class="pb-step"><span class="pb-step-num">02</span><span>Open retrospective activity (30 min)</span></div>
+          <div class="pb-step"><span class="pb-step-num">03</span><span>Vote & prioritise improvement items</span></div>
+          <div class="pb-step"><span class="pb-step-num">04</span><span>Assign ≤3 actions with DRI & due date</span></div>
+        </div>
+      </div>
+      <div class="pb-card rev d3">
+        <span class="pb-icon">📋</span>
+        <h4>RAID Management</h4>
+        <p>Live RAID log maintained in Confluence. Weekly review with stakeholders. Risks quantified by probability × impact matrix with mitigation ownership.</p>
+        <div class="pb-steps">
+          <div class="pb-step"><span class="pb-step-num">01</span><span>Log Risks, Assumptions, Issues, Deps</span></div>
+          <div class="pb-step"><span class="pb-step-num">02</span><span>Score risks (P × I matrix)</span></div>
+          <div class="pb-step"><span class="pb-step-num">03</span><span>Assign mitigation owner & deadline</span></div>
+          <div class="pb-step"><span class="pb-step-num">04</span><span>Review in weekly stakeholder sync</span></div>
+        </div>
+      </div>
+      <div class="pb-card rev d4">
+        <span class="pb-icon">🎯</span>
+        <h4>Backlog Grooming</h4>
+        <p>Weekly refinement ensuring top 2 sprints of backlog meet DoR. Stories rated against INVEST criteria. Technical risks surfaced before sprint commitment.</p>
+        <div class="pb-steps">
+          <div class="pb-step"><span class="pb-step-num">01</span><span>PO presents prioritised candidates</span></div>
+          <div class="pb-step"><span class="pb-step-num">02</span><span>Team estimates via Planning Poker</span></div>
+          <div class="pb-step"><span class="pb-step-num">03</span><span>AC reviewed and agreed in session</span></div>
+          <div class="pb-step"><span class="pb-step-num">04</span><span>DoR checklist completed per story</span></div>
+        </div>
+      </div>
+      <div class="pb-card rev d5">
+        <span class="pb-icon">🗺️</span>
+        <h4>Dependency Management</h4>
+        <p>Cross-team dependency maps maintained in Jira. Weekly dependency stand-up with tech leads. Critical path visualised in Confluence for programme-wide transparency.</p>
+        <div class="pb-steps">
+          <div class="pb-step"><span class="pb-step-num">01</span><span>Map inter-squad story dependencies</span></div>
+          <div class="pb-step"><span class="pb-step-num">02</span><span>Assign dependency owner per squad</span></div>
+          <div class="pb-step"><span class="pb-step-num">03</span><span>Review in PI Planning / programme sync</span></div>
+          <div class="pb-step"><span class="pb-step-num">04</span><span>Escalate blocking deps within 24h</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     EXPERIENCE TIMELINE
+════════════════════════════════════════════════ -->
+<section id="experience" class="section">
+  <div class="wrap">
+    <div class="label rev">Career</div>
+    <h2 class="rev d1">Professional <em style="color:var(--teal)">Experience</em></h2>
+    <p class="rev d2" style="max-width:560px;margin-top:12px;margin-bottom:64px;">A progressive leadership journey across Tier 1 global technology firms — each role building deeper delivery mastery and broader organisational impact.</p>
+
+    <div class="exp-timeline">
+      <!-- Role 1 -->
+      <div class="exp-item rev">
+        <div class="exp-card">
+          <div class="exp-year">2022 — Present</div>
+          <div class="exp-role">Project Manager</div>
+          <div class="exp-company">Tech Mahindra</div>
+          <div style="display:flex;gap:6px;margin:10px 0;flex-wrap:wrap;">
+            <span class="tag tag--teal">Mahindra Finance</span>
+            <span class="tag tag--teal">FairPrice</span>
+            <span class="tag tag--teal">SAFe Agile</span>
+          </div>
+          <div class="exp-wins">
+            <div class="exp-win">Led 3 cross-functional squads of 30+ engineers delivering fintech collections platform</div>
+            <div class="exp-win">Improved sprint predictability by 25% through structured capacity planning</div>
+            <div class="exp-win">Orchestrated Mirakl seller portal integration for Singapore's largest retailer</div>
+            <div class="exp-win">Maintained C-suite delivery dashboards and weekly stakeholder reporting</div>
+          </div>
+        </div>
+        <div class="exp-dot"></div>
+      </div>
+      <!-- Role 2 -->
+      <div class="exp-item rev d1">
+        <div></div>
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-year">2019 — 2022</div>
+          <div class="exp-role">Business Consultant</div>
+          <div class="exp-company">Capgemini</div>
+          <div style="display:flex;gap:6px;margin:10px 0;flex-wrap:wrap;">
+            <span class="tag tag--gold">SAP Commerce</span>
+            <span class="tag tag--gold">CDC Integration</span>
+            <span class="tag tag--gold">Europe</span>
+          </div>
+          <div class="exp-wins">
+            <div class="exp-win">Led SAP CDC × Hybris integration for Gorenje across European markets</div>
+            <div class="exp-win">Achieved 15% improvement in customer registration conversion</div>
+            <div class="exp-win">Delivered 50+ user stories across 6-week accelerated delivery cycle</div>
+            <div class="exp-win">Coordinated cross-region teams across India and European time zones</div>
+          </div>
+        </div>
+      </div>
+      <!-- Role 3 -->
+      <div class="exp-item rev d2">
+        <div class="exp-card">
+          <div class="exp-year">2017 — 2019</div>
+          <div class="exp-role">Consultant</div>
+          <div class="exp-company">Accenture</div>
+          <div style="display:flex;gap:6px;margin:10px 0;flex-wrap:wrap;">
+            <span class="tag tag--violet">Starbucks</span>
+            <span class="tag tag--violet">Support Ops</span>
+            <span class="tag tag--violet">US</span>
+          </div>
+          <div class="exp-wins">
+            <div class="exp-win">Managed Starbucks technical support operations across production systems</div>
+            <div class="exp-win">Led incident triage and deployment coordination for US digital platforms</div>
+            <div class="exp-win">Trained teams on operational tooling, escalation, and device management</div>
+            <div class="exp-win">Maintained 98% SLA adherence across P1/P2 production incidents</div>
+          </div>
+        </div>
+        <div class="exp-dot"></div>
+      </div>
+      <!-- Role 4 -->
+      <div class="exp-item rev d3">
+        <div></div>
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-year">2015 — 2017</div>
+          <div class="exp-role">Analyst</div>
+          <div class="exp-company">Cognizant</div>
+          <div style="display:flex;gap:6px;margin:10px 0;flex-wrap:wrap;">
+            <span class="tag tag--rose">eCommerce</span>
+            <span class="tag tag--rose">Agile Foundation</span>
+          </div>
+          <div class="exp-wins">
+            <div class="exp-win">Developed foundational Agile delivery skills across eCommerce engagements</div>
+            <div class="exp-win">Contributed to sprint execution, backlog management, and BA activities</div>
+            <div class="exp-win">Progressed from analyst to delivery coordination roles within 18 months</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     CERTIFICATIONS
+════════════════════════════════════════════════ -->
+<section id="certs" class="section">
+  <div class="wrap">
+    <div class="label rev">Credentials</div>
+    <h2 class="rev d1">Certifications & <em style="color:var(--teal)">Education</em></h2>
+    <p class="rev d2" style="max-width:560px;margin-top:12px;margin-bottom:48px;">Industry-recognised credentials spanning Agile delivery, product ownership, SAP, and enterprise technology management.</p>
+
+    <div class="certs-grid rev d3">
+      <div class="cert-card">
+        <span class="cert-badge">🎓</span>
+        <div class="cert-org">UpGrad</div>
+        <div class="cert-name">Advanced MBA</div>
+        <div class="cert-year">2023</div>
+        <div class="cert-verify"><span>✓</span> Verified</div>
+      </div>
+      <div class="cert-card">
+        <span class="cert-badge">🏅</span>
+        <div class="cert-org">Scrum Alliance</div>
+        <div class="cert-name">Certified Scrum Product Owner (CSPO)</div>
+        <div class="cert-year">2022</div>
+        <div class="cert-verify"><span>✓</span> Verified</div>
+      </div>
+      <div class="cert-card">
+        <span class="cert-badge">⚡</span>
+        <div class="cert-org">SAP</div>
+        <div class="cert-name">SAP Application Associate</div>
+        <div class="cert-year">2021</div>
+        <div class="cert-verify"><span>✓</span> Verified</div>
+      </div>
+      <div class="cert-card">
+        <span class="cert-badge">🔬</span>
+        <div class="cert-org">University</div>
+        <div class="cert-name">B.Tech (Hons) Electronics & Instrumentation</div>
+        <div class="cert-year">2015</div>
+        <div class="cert-verify"><span>✓</span> Accredited</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     LEADERSHIP
+════════════════════════════════════════════════ -->
+<section id="leadership" class="section">
+  <div class="wrap">
+    <div class="label rev">Philosophy</div>
+    <h2 class="rev d1">Leadership <em style="color:var(--teal)">Principles</em></h2>
+    <p class="rev d2" style="max-width:560px;margin-top:12px;margin-bottom:48px;">The mindset and principles that guide how I lead teams, manage delivery, and create lasting organisational impact.</p>
+
+    <div class="leadership-grid">
+      <div class="philosophy-card rev">
+        <span class="ph-icon">🎯</span>
+        <h4 style="color:var(--teal);margin-bottom:12px;">Outcomes Over Outputs</h4>
+        <div class="ph-quote">Velocity is a vanity metric. What matters is business value delivered per sprint — not story points closed.</div>
+        <p style="font-size:0.88rem;">I anchor every delivery conversation to measurable outcomes. Sprint planning starts with "what business problem are we solving?" not "how many tickets can we fit?"</p>
+      </div>
+      <div class="philosophy-card rev d1">
+        <span class="ph-icon">🛡️</span>
+        <h4 style="color:var(--gold);margin-bottom:12px;">Psychological Safety First</h4>
+        <div class="ph-quote">High-performing teams only exist where people feel safe to raise problems, challenge assumptions, and admit mistakes.</div>
+        <p style="font-size:0.88rem;">I build psychological safety through blameless retrospectives, protected team time, and visible escalation of systemic issues to leadership rather than individuals.</p>
+      </div>
+      <div class="philosophy-card rev d2">
+        <span class="ph-icon">🌐</span>
+        <h4 style="color:var(--green);margin-bottom:12px;">Distributed Team Excellence</h4>
+        <div class="ph-quote">Time zones are a feature, not a bug — async-first culture with intentional synchronous moments creates global delivery leverage.</div>
+        <p style="font-size:0.88rem;">Having coordinated teams across India, Singapore, Europe, and the US, I've developed a structured async-first model that maintains team cohesion across time zones.</p>
+      </div>
+      <div class="philosophy-card rev d3">
+        <span class="ph-icon">📊</span>
+        <h4 style="color:var(--violet);margin-bottom:12px;">Data-Driven Transparency</h4>
+        <div class="ph-quote">Stakeholders deserve honesty, not optimism. A clear red RAG status with a mitigation plan builds more trust than a false green.</div>
+        <p style="font-size:0.88rem;">I maintain real-time Jira dashboards, weekly RAG reports, and proactive risk escalation — ensuring stakeholders always have accurate delivery intelligence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════ -->
+<section id="contact" class="section">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="label rev">Get In Touch</div>
+        <h2 class="rev d1">Let's build<br><em style="color:var(--teal)">something great</em></h2>
+        <p class="rev d2" style="margin-top:16px;margin-bottom:40px;">Open to senior Scrum Master, Technical PM, and Agile Delivery Lead roles at technology-driven organisations. Available for global and remote engagements.</p>
+        <div class="contact-links rev d3">
+          <a href="https://www.linkedin.com/in/shivangi-kaushik-934978a3" target="_blank" class="clink">
+            <span class="clink-icon">💼</span>
+            <div><span class="clink-label">LinkedIn</span><span class="clink-value">linkedin.com/in/shivangi-kaushik</span></div>
+            <span class="clink-arrow">↗</span>
+          </a>
+          <a href="mailto:shivangikaushik402@gmail.com" class="clink">
+            <span class="clink-icon">✉️</span>
+            <div><span class="clink-label">Email</span><span class="clink-value">shivangikaushik402@gmail.com</span></div>
+            <span class="clink-arrow">↗</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1tK273SgEqXK83LY8GlfPE2KnDD685Mv5/view?usp=sharing" target="_blank" class="clink">
+            <span class="clink-icon">📄</span>
+            <div><span class="clink-label">Resume / CV</span><span class="clink-value">View Resume</span></div>
+            <span class="clink-arrow">↗</span>
+          </a>
+          <a href="tel:+919962729693" class="clink">
+            <div><span class="clink-label">Schedule</span><span class="clink-value">Book a 30-min intro call</span></div>
+            <span class="clink-arrow">↗</span>
+          </a>
+        </div>
+        <div style="margin-top:32px;padding:20px;background:var(--panel);border:1px solid var(--border);border-radius:10px;" class="rev d4">
+          <div style="font-family:var(--f-mono);font-size:0.62rem;color:var(--text-3);margin-bottom:8px;letter-spacing:0.12em;text-transform:uppercase;">Location & Availability</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;color:var(--text);">
+            <span style="color:var(--green);font-size:1rem">●</span>
+            Delhi, India · Available for global & remote roles · IST timezone
+          </div>
+        </div>
+      </div>
+      <div class="rev d2">
+        <div style="background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:32px;">
+          <h4 style="color:var(--white);margin-bottom:24px;font-size:1.1rem;">Send a Message</h4>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <input id="msg-first" type="text" class="form-input" placeholder="Jane">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input id="msg-last" type="text" class="form-input" placeholder="Smith">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input id="msg-email" type="email" class="form-input" placeholder="jane@company.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Organisation</label>
+            <input id="msg-org" type="text" class="form-input" placeholder="Tech Corp Ltd.">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Role / Opportunity</label>
+            <input id="msg-role" type="text" class="form-input" placeholder="Senior Scrum Master — APAC team">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea id="msg-body" class="form-input" placeholder="Tell me about your team, the challenge, and what you're looking for…"></textarea>
+          </div>
+          <button id="contact-submit" type="button" class="btn btn-teal" style="width:100%;justify-content:center;margin-top:4px;">Send Message →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-logo">Shivangi<span>.</span></div>
+    <div class="footer-copy">© 2025 Shivangi Kaushik · Technical PM | Scrum Master | Agile Delivery Lead · Delhi, India</div>
+    <div class="footer-certs">
+      <span class="footer-cert">CSPO</span>
+      <span class="footer-cert">SAP</span>
+      <span class="footer-cert">MBA</span>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+/* ─── Nav scroll ─── */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('solid', window.scrollY > 60));
+
+/* ─── Reveal on scroll ─── */
+const revObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revObs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.rev').forEach(el => revObs.observe(el));
+
+/* ─── Smooth scroll ─── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+/* ─── Counter animation ─── */
+function animateCounters() {
+  document.querySelectorAll('.counter-num[data-target]').forEach(el => {
+    const target = parseInt(el.dataset.target);
+    const suffix = el.innerHTML.match(/<span>(.*?)<\/span>/)?.[1] || '';
+    let current = 0;
+    const step = target / 40;
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      el.innerHTML = Math.round(current) + `<span>${suffix}</span>`;
+      if (current >= target) clearInterval(timer);
+    }, 35);
+  });
+}
+const heroObs = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) { animateCounters(); heroObs.disconnect(); }
+}, { threshold: 0.3 });
+heroObs.observe(document.getElementById('hero'));
+
+/* ─── Skill tabs ─── */
+function showSkillPanel(id, btn) {
+  document.querySelectorAll('.skills-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.skill-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+/* ─── Project toggle ─── */
+function toggleProject(id) {
+  const card = document.getElementById(id);
+  const isOpen = card.classList.contains('open');
+  document.querySelectorAll('.project-card').forEach(c => c.classList.remove('open'));
+  if (!isOpen) card.classList.add('open');
+}
+
+/* ─── Velocity chart ─── */
+const velData = [
+  { s:'S7',  c:44, d:40 }, { s:'S8',  c:46, d:43 },
+  { s:'S9',  c:48, d:47 }, { s:'S10', c:50, d:48 },
+  { s:'S11', c:52, d:51 }, { s:'S12', c:52, d:52 },
+  { s:'S13', c:54, d:52 }, { s:'S14', c:54, d:54 },
+];
+const maxV = 58;
+const vc = document.getElementById('velChart');
+if (vc) {
+  velData.forEach((v, i) => {
+    const col = document.createElement('div');
+    col.className = 'vc-col';
+    col.innerHTML = `
+      <div class="vc-bars">
+        <div class="vc-bar vc-committed" style="height:${(v.c/maxV)*90}%;animation:growUp 0.8s ${i*0.1}s var(--ease) both"></div>
+        <div class="vc-bar vc-delivered" style="height:${(v.d/maxV)*90}%;animation:growUp 0.8s ${i*0.1+0.05}s var(--ease) both"></div>
+      </div>
+      <div class="vc-label">${v.s}</div>`;
+    vc.appendChild(col);
+  });
+}
+const st = document.createElement('style');
+st.textContent = `@keyframes growUp { from{height:0} }`;
+document.head.appendChild(st);
+
+/* ─── Send message via SMS to phone number ─── */
+const contactSubmit = document.getElementById('contact-submit');
+if (contactSubmit) {
+  contactSubmit.addEventListener('click', () => {
+    const first = document.getElementById('msg-first').value.trim();
+    const last = document.getElementById('msg-last').value.trim();
+    const email = document.getElementById('msg-email').value.trim();
+    const org = document.getElementById('msg-org').value.trim();
+    const role = document.getElementById('msg-role').value.trim();
+    const body = document.getElementById('msg-body').value.trim();
+    const message = `Hi Shivangi,\n\nName: ${first || 'N/A'} ${last || 'N/A'}\nEmail: ${email || 'N/A'}\nOrganisation: ${org || 'N/A'}\nRole / Opportunity: ${role || 'N/A'}\nMessage: ${body || 'N/A'}`;
+    window.location.href = `sms:+919962729693?body=${encodeURIComponent(message)}`;
+  });
+}
+</script>
+</body>
+</html>
